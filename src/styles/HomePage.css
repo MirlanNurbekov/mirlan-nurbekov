@@ -1,0 +1,31 @@
+/* Container that holds all the stats */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+/* Individual box for each stat */
+.stat-box {
+  background: #e9e9e9;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2rem;
+  width: 180px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* The animated number */
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* The label for each stat */
+.stat-label {
+  font-size: 1rem;
+  color: #555;
+}
