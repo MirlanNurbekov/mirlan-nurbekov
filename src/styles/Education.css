@@ -1,0 +1,47 @@
+/* src/styles/Education.css */
+.education-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-item {
+  background-color: #fff;
+  border-left: 4px solid var(--blue);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.education-item h3 {
+  margin: 0;
+  color: var(--black);
+}
+
+.education-item p {
+  margin: 0.25rem 0;
+  color: #333;
+}
+
+.education-item span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.education-item a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}

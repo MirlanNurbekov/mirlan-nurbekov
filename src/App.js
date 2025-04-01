@@ -1,48 +1,41 @@
-import React, { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import EducationPage from "./pages/EducationPage";
-import WorkPage from "./pages/WorkPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import "./App.css";
+// src/App.js
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Education from './pages/Education';
+import Awards from './pages/Awards';
+import Contact from './pages/Contact';
 
 function App() {
   useEffect(() => {
     const handleContextMenu = (e) => {
       e.preventDefault();
     };
-    const handleKeyDown = (e) => {
-      if (e.keyCode === 123) {
-        // F12 key
-        e.preventDefault();
-      }
-    };
-    document.addEventListener("contextmenu", handleContextMenu);
-    document.addEventListener("keydown", handleKeyDown);
 
+    document.addEventListener('contextmenu', handleContextMenu);
     return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('contextmenu', handleContextMenu);
     };
   }, []);
-
   return (
-    <div className="app-container">
-      <Navbar />
-      <div className="content-wrap">
+    <Router>
+      <div className="app-container">
+        <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/education" element={<EducationPage />} />
-          <Route path="/work" element={<WorkPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/awards" element={<Awards />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

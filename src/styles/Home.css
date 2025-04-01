@@ -1,0 +1,15 @@
+/* src/styles/Home.css */
+.home-page {
+  width: 100%;
+}
+
+.home-intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.home-intro h2 {
+  margin-bottom: 1rem;
+}

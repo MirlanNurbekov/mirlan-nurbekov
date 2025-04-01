@@ -1,0 +1,41 @@
+/* src/styles/Awards.css */
+.awards-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.awards-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.award-item {
+  background-color: #f5f5f5;
+  border-left: 4px solid var(--black);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.award-item h3 {
+  margin: 0;
+  color: var(--black);
+}
+
+.award-item p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.award-item a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
