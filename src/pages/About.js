@@ -14,7 +14,7 @@ function About() {
         />
         <div className="about-text">
           <p>
-            Hello! I’m [Your Name], a passionate web developer with a focus on React, 
+            Hello! I’m Mirlan Nurbekov, a passionate developer with a focus on React, 
             JavaScript, and modern web technologies. My goal is to build responsive, 
             user-friendly applications that solve real-world problems.
           </p>
