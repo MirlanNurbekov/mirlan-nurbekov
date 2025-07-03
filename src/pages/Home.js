@@ -1,67 +1,31 @@
-// src/Pages/Home.js
+// Home.js
 
 import React from 'react';
 import '../styles/Home.css';
+import meImage from '../assets/me/me1.png';
 
-const Home = () => {
+function Home() {
   return (
-    <section className="home" id="home">
-      {/* Experience Section */}
-      <div className="experience-section">
-        <div className="experience-item">
-          <h3>7+</h3>
-          <p>Years of Experience</p>
+    <div className="home-page">
+      <section className="about-section">
+        <div className="about-image">
+          <img src={meImage} alt="Me" />
         </div>
-        <div className="experience-item">
-          <h3>30+</h3>
-          <p>Projects Completed</p>
+        <div className="about-text">
+          <h3>About Me</h3>
+          <p>
+            I am a highly skilled software engineer with about 8 years of 
+            experience working in dynamic, international environments. I specialize in designing, 
+            building, and optimizing robust, scalable systems that support business-critical operations. 
+            I have a proven ability to manage demanding schedules, handle critical administrative 
+            responsibilities, and foster clear communication across multicultural teams. My strengths 
+            lie in delivering reliable technical solutions, adapting quickly to new challenges, and 
+            contributing meaningfully to both team and organizational success.
+          </p>
         </div>
-        <div className="experience-item">
-          <h3>3</h3>
-          <p>IT Competitions Won</p>
-        </div>
-      </div>
-
-      <div className="content">
-        <p>
-          A versatile and highly skilled software engineer with over seven years
-          of experience in international environments as a software engineer.
-          Proficient in crafting complex queries, stored procedures, and
-          functions, I have a proven track record of managing intricate
-          schedules, handling key administrative tasks, and fostering
-          seamless communication across culturally diverse teams. Fluent in
-          English and Russian.
-        </p>
-        <a href="#projects" className="btn">View My Projects</a>
-      </div>
-
-      {/* Skills Section */}
-      <div className="skills-section">
-        <h2>Skills</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-        <div className="skills">
-          <div className="skill">
-            <div className="circle">
-              <div className="percentage">95%</div>
-            </div>
-            <p>Web Development</p>
-          </div>
-          <div className="skill">
-            <div className="circle">
-              <div className="percentage">90%</div>
-            </div>
-            <p>Software Engineering</p>
-          </div>
-          <div className="skill">
-            <div className="circle">
-              <div className="percentage">80%</div>
-            </div>
-            <p>UI/UX Design</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
-};
+}
 
 export default Home;
