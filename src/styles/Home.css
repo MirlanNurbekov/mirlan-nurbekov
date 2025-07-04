@@ -1,59 +1,87 @@
-/* style for Home */
-
-.home-page {
-  width: 100%;
-  padding: 0rem;
+.home {
+  padding: 0rem 0rem;
+  color: #e0e0e0;
+  background-color: #0a192f;
+  text-align: center;
 }
 
-/* About section styling */
-.about-section {
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+.btn {
+  padding: 0.1rem 1.6rem;
+  color: #0a192f;
+  background-color: #64ffda;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00cc88;
+}
+
+/* Experience Section */
+.experience-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.experience-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  padding: 1rem 1rem;
-  background-color: #f9f9f9;
-  border-radius: 1rem;
+  gap: 0.5rem;
+  text-align: center;
+  color: #e0e0e0;
+  border: 2px solid #9b59b6; /* Purple outline */
+  padding: 0rem;
+  height: 6rem;
+  width: 30%;
+  background-color: #0a192f; /* Match page background color */
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-size: 1.1rem;
 }
 
-.about-image img {
-  width: 250px;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+.experience-item:hover {
+  border-width: 3px;
+  border-color: #d7bde2; /* Lighter purple on hover */
 }
 
-.about-text {
-  max-width: 600px;
-  color: #333;
+.experience-item h3, .experience-item p {
+  display: inline-block;
+  margin: 0;
+  color: #64ffda;
 }
 
-.about-text h3 {
+.experience-item h3 {
+  font-size: 1.6rem;
   font-weight: bold;
+}
+
+.percentage {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  color: #ffffff;
 }
-
-.about-text p {
-  line-height: 1.6;
-}
-
 
 @media (max-width: 768px) {
-  .about-section {
+  .experience-section {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    width: 100%;
   }
 
-  .about-image img {
-    margin: 0 auto;
-    display: center;
-  }
-
-  .about-text {
-    max-width: 100%;
-    padding: 0 1rem;
+  .experience-item {
+    width: 90%;
+    max-width: 400px;
   }
 }

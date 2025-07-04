@@ -1,27 +1,77 @@
 // src/pages/Projects.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Projects.css';
 
+import Techmakers1 from '../assets/projects/Techmakers/Techmakers1.PNG';
+import Techmakers2 from '../assets/projects/Techmakers/Techmakers2.PNG';
+import Techmakers3 from '../assets/projects/Techmakers/Techmakers3.PNG';
+
+import FarmSens1 from '../assets/projects/FarmSens/FarmSens1.jpg'
+import FarmSens2 from '../assets/projects/FarmSens/FarmSens2.jpg'
+import FarmSens3 from '../assets/projects/FarmSens/FarmSens3.jpg'
+import FarmSens4 from '../assets/projects/FarmSens/FarmSens4.jpg'
+import FarmSens5 from '../assets/projects/FarmSens/FarmSens5.jpg'
+
+import EdUS1 from '../assets/projects/EdUS/EdUS1.PNG'
+import EdUS2 from '../assets/projects/EdUS/EdUS2.PNG'
+import EdUS3 from '../assets/projects/EdUS/EdUS3.PNG'
+
 function Projects() {
+  const techmakersImages = [Techmakers1, Techmakers2, Techmakers3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const farmsensImages = [FarmSens1, FarmSens2, FarmSens3, FarmSens4, FarmSens5];
+  const [currentImageIndexFarmSens, setCurrentImageIndexFarmSens] = useState(0);
+
+  const edusImages = [EdUS1, EdUS2, EdUS3];
+  const [currentImageIndexEdUS, setCurrentImageIndexEdUS] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % techmakersImages.length);
+    }, 4000); // 4 seconds
+    return () => clearInterval(interval); // cleanup
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndexFarmSens(prevIndex => (prevIndex + 1) % farmsensImages.length);
+    }, 4000); // 4 seconds
+    return () => clearInterval(interval); // cleanup
+  }, [])
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndexEdUS(prevIndex => (prevIndex + 1) % edusImages.length);
+    }, 4000); // 4 seconds
+    return () => clearInterval(interval); // cleanup
+  }, []);
+
+
   const projectList = [
     {
-      title: 'Project A',
-      imageUrl: '/path/to/projectA.png',
-      description: 'A brief description of Project A...',
-      link: 'https://example.com/project-a'
+      title: 'TechMakers',
+      imageUrl: techmakersImages[currentImageIndex],
+      description: 'Designed and developed a fully functional e-commerce web application, with complete storage system.',
+      link: 'https://www.techmakers.com.my/'
     },
     {
-      title: 'Project B',
-      imageUrl: '/path/to/projectB.png',
-      description: 'A brief description of Project B...',
-      link: 'https://example.com/project-b'
+      title: 'FarmSens',
+      imageUrl: farmsensImages[currentImageIndexFarmSens],
+      description: 'Contributed to the development and implementation of software and hardware solutions for a comprehensive crop monitoring.',
+      link: 'https://www.youtube.com/watch?v=1_YkQsDGzDg&ab_channel=Cloudatik'
     },
-    // ...more
+    {
+      title: 'EdUS',
+      imageUrl: edusImages[currentImageIndexEdUS],
+      description: 'Developed, and managed a full-stack web application for EdUS, a consulting company specializing in international education.',
+      link: 'https://edus.org.kg/'
+    },
   ];
 
   return (
     <section className="projects-page">
-      <h2>My Projects</h2>
       <div className="projects-container">
         {projectList.map((project, index) => (
           <div className="project-card" key={index}>

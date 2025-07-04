@@ -1,0 +1,34 @@
+.error-page {
+  padding: 4rem 2rem;
+  background-color: #0a192f;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.error-title {
+  font-size: 2.5rem;
+  color: #ff6666;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.return-button {
+  padding: 0.8rem 1.6rem;
+  color: #0a192f;
+  background-color: #64ffda;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #00cc88;
+}
