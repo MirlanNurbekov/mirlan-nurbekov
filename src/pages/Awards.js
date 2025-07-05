@@ -1,41 +1,48 @@
 // src/pages/Awards.js
 import React from 'react';
 import '../styles/Awards.css';
+import cert1 from '../assets/awards/cert.jpeg';
+import cert2 from '../assets/awards/cert2.jpeg';
+import cert3 from '../assets/awards/cert3.jpeg';
+import Projects from './Projects';
 
-function Awards() {
-  const awardsData = [
+const Awards = () => {
+  const awards = [
     {
-      title: 'Best Innovator Award',
-      organization: 'Tech Summit',
-      year: 2023,
-      link: 'https://example.com/best-innovator'
+      image: cert1,
+      link: 'https://www.linkedin.com/posts/mirlan-nurbekov_studentambassadors-inti-activity-7112816177000644609-LHn7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAXo54BbUDOUuPt8roO7djzygpgvsC1wHI'
     },
     {
-      title: 'Top Coder',
-      organization: 'Online Coding Platform',
-      year: 2022,
-      link: 'https://example.com/top-coder'
+      image: cert2,
+      link: 'https://www.linkedin.com/posts/mirlan-nurbekov_competition-usc-inti-activity-7114659237804281856-IaQB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAXo54BbUDOUuPt8roO7djzygpgvsC1wHI'
+    },
+    {
+      image: cert3,
+      link: 'https://www.linkedin.com/posts/mirlan-nurbekov_it-was-such-a-fantastic-experience-to-activity-7119582838890389504-l6mo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAXo54BbUDOUuPt8roO7djzygpgvsC1wHI'
     }
   ];
 
   return (
     <section className="awards-page">
-      <h2>My Awards</h2>
-      <div className="awards-list">
-        {awardsData.map((award, index) => (
-          <div className="award-item" key={index}>
-            <h3>{award.title}</h3>
-            <p>{award.organization} - {award.year}</p>
-            {award.link && (
-              <a href={award.link} target="_blank" rel="noreferrer">
-                Learn More
-              </a>
-            )}
-          </div>
+      <div className="cert-card-container">
+        {awards.map((award, index) => (
+          <a
+            key={index}
+            href={award.link}
+            target="_blank"
+            rel="noreferrer"
+            className="cert-card"
+          >
+            <img src={award.image} alt={`Certificate ${index + 1}`} className="cert-image" />
+          </a>
         ))}
+      </div>
+
+      <div className="projects-section">
+        <Projects />
       </div>
     </section>
   );
-}
+};
 
 export default Awards;

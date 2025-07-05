@@ -2,16 +2,21 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 
+import exp0 from '../assets/work/su5.jpg';
 import exp1 from '../assets/work/salymbekov.png';
-import exp2 from '../assets/work/cincaria.png';
-import exp3 from '../assets/work/zentrek.png';
+import exp2 from '../assets/work/su2.jpg';
+import exp3 from '../assets/work/cincaria1.jpeg';
+import exp4 from '../assets/work/cincaria.png';
+import exp5 from '../assets/work/cincaria2.jpeg';
+import exp6 from '../assets/work/zent3.jpeg';
 
-import award1 from '../assets/work/zentrek.png';
-import award2 from '../assets/work/zentrek.png';
-import award3 from '../assets/work/zentrek.png';
+
+import award1 from '../assets/awards/01.jpeg';
+import award2 from '../assets/awards/0.jpeg';
+import award3 from '../assets/awards/2.jpeg';
 
 const Home = () => {
-  const experienceImages = [exp1, exp2, exp3];
+  const experienceImages = [exp0, exp1, exp2, exp3, exp4, exp5, exp6];
   const awardImages = [award1, award2, award3];
 
   const [expIndex, setExpIndex] = useState(0);
@@ -51,7 +56,7 @@ const Home = () => {
           <p className="card-text">8 Years of Experience</p>
         </div>
 
-        <div className="card" onClick={() => window.location.href = "#achievements"}>
+        <div className="card" onClick={() => window.location.href = "/awards"}>
           <img src={awardImages[awardIndex]} alt="Achievements" className="card-image" />
           <p className="card-text">Achievements & Awards</p>
         </div>

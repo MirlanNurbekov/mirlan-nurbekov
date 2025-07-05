@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -13,6 +13,30 @@ import Error from './pages/Error';
 import './App.css';
 
 const App = () => {
+    useEffect(() => {
+        const blockKeys = (e) => {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+                (e.ctrlKey && e.key === 'U')
+            ) {
+                e.preventDefault();
+            }
+        };
+
+        const blockContextMenu = (e) => {
+            e.preventDefault();
+        };
+
+        document.addEventListener('keydown', blockKeys);
+        document.addEventListener('contextmenu', blockContextMenu);
+
+        return () => {
+            document.removeEventListener('keydown', blockKeys);
+            document.removeEventListener('contextmenu', blockContextMenu);
+        };
+    }, []);
+
     return (
         <>
             <Navbar />
@@ -24,7 +48,7 @@ const App = () => {
                     <Route path="/education" element={<Education />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="*" element={<Error />} /> 
+                    <Route path="*" element={<Error />} />
                 </Routes>
             </div>
             <Footer />
