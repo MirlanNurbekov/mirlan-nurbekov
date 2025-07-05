@@ -1,87 +1,65 @@
+/* src/styles/Home.css */
 .home {
-  padding: 0rem 0rem;
+  padding: 2rem 1rem;
   color: #e0e0e0;
   background-color: #0a192f;
   text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #112240;
+  border: 2px solid #64ffda;
+  border-radius: 12px;
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(100, 255, 218, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-text {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #64ffda;
+  font-weight: bold;
 }
 
 .content p {
   font-size: 1.2rem;
   line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto 1rem;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
 }
 
-.btn {
-  padding: 0.1rem 1.6rem;
-  color: #0a192f;
-  background-color: #64ffda;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #00cc88;
-}
-
-/* Experience Section */
-.experience-section {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1rem;
-  gap: 1rem;
-}
-
-.experience-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  text-align: center;
-  color: #e0e0e0;
-  border: 2px solid #9b59b6; /* Purple outline */
-  padding: 0rem;
-  height: 6rem;
-  width: 30%;
-  background-color: #0a192f; /* Match page background color */
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  font-size: 1.1rem;
-}
-
-.experience-item:hover {
-  border-width: 3px;
-  border-color: #d7bde2; /* Lighter purple on hover */
-}
-
-.experience-item h3, .experience-item p {
-  display: inline-block;
-  margin: 0;
-  color: #64ffda;
-}
-
-.experience-item h3 {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.percentage {
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .experience-section {
+  .card-container {
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 
-  .experience-item {
+  .card {
     width: 90%;
-    max-width: 400px;
+    max-width: 350px;
   }
 }

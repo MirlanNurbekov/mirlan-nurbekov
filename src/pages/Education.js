@@ -8,14 +8,14 @@ import IntiImg from '../assets/education/inti.png';
 const educationData = [
   {
     institution: 'Coventry University, UK',
-    degree: 'Bachelor of Science (Hons) in Computing & IT ',
+    degree: 'Bachelor of Science with honors in Computing & IT ',
     year: '2019 - 2022',
     imageUrl: CoventryImg,
     link: 'https://www.coventry.ac.uk/london/about-us/'
   },
   {
     institution: 'INTI International University & College, Malaysia',
-    degree: 'Bachelor of Science (Hons) in Electrical and Electronic Engineering',
+    degree: 'Diploma of Science in Electrical and Electronic Engineering',
     year: '2015 - 2018',
     imageUrl: IntiImg,
     link: 'https://newinti.edu.my/campuses/inti-international-university/'
